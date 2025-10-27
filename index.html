@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmaceutical Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f0f4f7;
+      color: #333;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0078D7;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-card h3 {
+      padding: 15px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    /* Popup info box */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 500px;
+      text-align: left;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    .popup-content h2 {
+      margin-bottom: 10px;
+      color: #0078D7;
+    }
+
+    .popup-content p {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 22px;
+      cursor: pointer;
+      color: #444;
+    }
+
+    .close-btn:hover {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💊 Pharmaceutical Products</h1>
+
+  <div class="product-grid">
+    <div class="product-card" onclick="openPopup('paracetamol')">
+      <img src="https://assets.truemeds.in/Images/ProductImage/TM-CACR1-003980/omee-capsule-20_omee-capsule-20--TM-CACR1-003980_1.png" alt="Paracetamol">
+      <h3>Omee</h3>
+    </div>
+
+    <div class="product-card" onclick="openPopup('amoxicillin')">
+      <img src="https://assets.sayacare.in/api/images/product_image/large_image/39/44/Amoxicillin-500-mg-Clavulanic-acid-125-mg-Tablet_1.webp" alt="Amoxicillin">
+      <h3>Amoxicillin</h3>
+    </div>
+
+    <div class="product-card" onclick="openPopup('cetirizine')">
+      <img src="https://tiimg.tistatic.com/fp/1/007/645/cetirizine-tablets-317.jpg" alt="Cetirizine">
+      <h3>Cetirizine</h3>
+    </div>
+  </div>
+  
+
+  <!-- Popups -->
+  <div id="paracetamol" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('paracetamol')">&times;</span>
+      <h2>Paracetamol</h2>
+      <p><b>Use:</b> 
+Omee Capsule: View Uses, Side Effects, Price and Substitutes
+12 Oct 2025 — Omee Capsule. ... Omee Capsule is a medicine that reduces the amount of acid produced in your stomach. It is used in th...
+favicon
+1mg
+
+Omee Capsule | Uses, Side Effects, Price - Apollo Pharmacy
+13 Oct 2025 — Omee Capsule is used in the treatment of gastroesophageal reflux disease (GERD), peptic ulcers, and Zollinger-Ellison s...
+favicon
+Apollo Pharmacy
+
+Omee Capsule: Uses, Side-effects, Price, Dosage & More Info
+30 Sept 2025 — Description. ... Omee capsule is a medication used to treat ulcers in the stomach and intestines, heartburn, and chest...
+favicon
+PharmEasy
+
+Show all
+Dive deeper in AI Mode
+This is for informational purposes only. For medical advice or a diagnosis, consult a professional. AI responses may include mistakes. Learn more
+
+
+
+</p>
+      <p><b>Dosage:</b> 500mg every 4-6 hours as needed (max 4g per day).</p>
+      <p><b>Side Effects:</b> Rare; may include nausea or rash.</p>
+    </div>
+  </div>
+
+  <div id="amoxicillin" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('amoxicillin')">&times;</span>
+      <h2>Amoxicillin</h2>
+      <p><b>Use:</b> Amoxicillin is a type of penicillin antibiotic that treats infections caused by bacteria. It doesn't treat colds, the flu or infections caused by viruses. Common brand names include Amoxil®, Moxilin®, Sumox® and Trimox®.</p>
+      <p><b>Dosage:</b> 500mg three times a day for 7 days.</p>
+      <p><b>Side Effects:</b> Diarrhea, nausea, mild skin rash.</p>
+    </div>
+  </div>
+
+  <div id="cetirizine" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('cetirizine')">&times;</span>
+      <h2>Cetirizine</h2>
+      <p><b>Use:</b>CETIRIZINE (se TI ra zeen) prevents and treats allergy symptoms, such as red, itchy eyes, sneezing, a runny or stuffy nose, or hives. It works by blocking histamine, a substance released by the body during an allergic reaction. It belongs to a group of medications called antihistamines..</p>
+      <p><b>Dosage:</b> 10mg once daily.</p>
+      <p><b>Side Effects:</b> Mild drowsiness or dry mouth.</p>
+    </div>
+  </div>
+
+  <script>
+    function openPopup(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+
+    function closePopup(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
